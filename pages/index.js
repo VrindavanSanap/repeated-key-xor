@@ -2,7 +2,7 @@
 import { useState, useEffect} from 'react';
 import Image from 'next/image'
 import { Inter,IBM_Plex_Mono } from 'next/font/google'
-import {repeat_key_xor, repeat_key_xor_dec} from "../crypto.js"
+import {repeat_key_xor, repeat_key_xor_dec} from "../crypto.js";
 
 const inter = Inter({ subsets: ['latin'] })
 const ibm_plex = IBM_Plex_Mono({ subsets: ['latin'],
