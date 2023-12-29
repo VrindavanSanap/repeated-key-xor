@@ -17,7 +17,10 @@ export default function Home() {
   const [is_encrypt_mode, set_is_encrypt_mode] = useState(true);
   useEffect(() => { 
     set_result(repeat_key_xor(message, key));
-  },[])
+  }, [])
+  useEffect(() => {
+    make_result();
+  }, [message])
  function make_result(){
     if (is_encrypt_mode){
       set_result(repeat_key_xor(message, key));
@@ -90,7 +93,7 @@ export default function Home() {
     >
   {is_encrypt_mode ? "Encrypted Message: " :"Decrypted Message: " }
 
-<br/>
+    <br/>
   {result}
           </div>
 

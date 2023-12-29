@@ -26,7 +26,6 @@ export function repeat_key_xor(string1, key){
     string2 += key; 
   }
   string2 = string2.slice(0, string1.length);
-  console.log(string1)
   if(!(string1.length == string2.length)){
         return "Non vaild strings"
   }
@@ -35,7 +34,14 @@ export function repeat_key_xor(string1, key){
     let hex1 = string1.charCodeAt(i);
     let hex2 = string2.charCodeAt(i);
     let hex3 = hex1 ^ hex2;
-    result += (hex3.toString(16));
+    if ( (hex3.toString(16).length) ==1){
+      
+      result +="0"+ (hex3.toString(16));
+    }else{
+
+      result += (hex3.toString(16));
+    }
+
   }
   return result; 
 
