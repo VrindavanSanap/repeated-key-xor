@@ -11,7 +11,7 @@
   "dependencies": {
     "jstat": "^1.9.6",
     "mathjs": "^12.2.1",
-    "next": "15.5.15",
+    "next": "15.5.18",
     "react": "^18",
     "react-dom": "^18"
   },
